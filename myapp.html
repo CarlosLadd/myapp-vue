@@ -7,11 +7,23 @@
 
 <body>
 
-  <div id="toreto">
-  <span v-bind:title="exampleTwo" v-if="showWelcome">Example #2</span>
+  <!-- Example #1 -->
+  <div id="exampleOne">
+    <button v-on:click="didTapOnTestButton">Test</button>
+    <span v-bind:title="exampleTwo" v-if="showWelcome">Example #2</span>
   </div>
 
-<script src="logic.js"></script>
+  <!-- Example #2 -->
+  <div id="exampleTwo">
+    <ol>
+      <li v-for="car in cars">
+        {{ car.name }} is color {{car.color}}
+      </li>
+    </ol>
+  </div>
+
+  <!-- Logic Script -->
+  <script src="logic.js"></script>
 </body>
 
 </html>
